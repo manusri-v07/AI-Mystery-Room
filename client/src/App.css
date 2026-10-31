@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #101114;
+  color: #f4f0e8;
+  font-family: 'DM Sans', sans-serif;
+}
+
+button { cursor: pointer; font: inherit; }
+
+.app { min-height: 100vh; }
+
+header {
+  padding: 22px 7%;
+  border-bottom: 1px solid #303035;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  color: #d6ad62;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+header span, .eyebrow, footer {
+  color: #aaa39a;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+main {
+  width: min(1050px, 90%);
+  margin: 65px auto;
+  min-height: 65vh;
+}
+
+.hero { text-align: center; max-width: 850px; margin: 50px auto; }
+
+.eyebrow { color: #d6ad62; font-weight: 700; }
+
+h1 {
+  font: 700 clamp(34px, 6vw, 58px) 'Playfair Display', serif;
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+h2, h3 { font-family: 'Playfair Display', serif; }
+
+.subtitle, .story {
+  color: #b9b5ae;
+  line-height: 1.8;
+  max-width: 720px;
+}
+
+.hero .subtitle { margin: 20px auto 35px; }
+
+.panel, .card {
+  background: #1b1c21;
+  border: 1px solid #34343a;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.panel { max-width: 650px; margin: 30px auto; }
+
+.panel p, .card p {
+  color: #c4c0b8;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.levels, .stats, .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.level {
+  flex: 1;
+  padding: 13px;
+  color: #ddd;
+  background: #25262c;
+  border: 1px solid #45454b;
+  border-radius: 7px;
+}
+
+.level.active {
+  border-color: #d6ad62;
+  color: #e7c783;
+  background: #332b1e;
+}
+
+.primary, .secondary {
+  border: 0;
+  border-radius: 7px;
+  padding: 14px 22px;
+  margin: 12px 8px 0 0;
+  font-weight: 700;
+}
+
+.primary {
+  background: #c49a51;
+  color: #171513;
+}
+
+.primary:hover { background: #e0b96f; }
+.primary:disabled { opacity: .5; cursor: not-allowed; }
+
+.secondary {
+  background: #303139;
+  color: #e8d5ad;
+  border: 1px solid #55545a;
+}
+
+.stats { margin: 25px 0 40px; }
+
+.stats div {
+  flex: 1;
+  min-width: 120px;
+  background: #1b1c21;
+  padding: 18px;
+  border-radius: 9px;
+  text-align: center;
+}
+
+.stats strong { display: block; font-size: 26px; color: #d6ad62; }
+.stats span { font-size: 10px; letter-spacing: 1px; color: #aaa; }
+
+.cards { margin: 15px 0 35px; }
+
+.card { flex: 1 1 280px; margin: 0; }
+.card h3 { color: #e0bd7d; }
+
+.clue { flex: 1 1 260px; }
+
+.found, .correct { color: #7bc99b; }
+.wrong { color: #e58c7c; }
+
+.choice {
+  display: block;
+  padding: 16px;
+  border: 1px solid #414149;
+  border-radius: 8px;
+  margin: 12px 0;
+  text-align: left;
+}
+
+.choice input { margin-right: 12px; accent-color: #c49a51; }
+
+.error {
+  padding: 14px;
+  background: #482626;
+  color: #ffb6a9;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #303035;
+}
+
+@media (max-width: 600px) {
+  header { padding: 18px 5%; }
+  header span { display: none; }
+  main { margin: 35px auto; }
+  .panel { padding: 18px; }
+  .stats { gap: 7px; }
+}
